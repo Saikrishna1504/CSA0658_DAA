@@ -16,3 +16,27 @@ int main(){
 	reverseString(s,revstr,0,j);
 	printf("The reversed string is %s\n",revstr);
 }
+
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[] = "Hello World";
+    int length = strlen(str);
+    char temp;
+
+    printf("Original String: %s\n", str);
+
+    // Reversing the string manually
+    for (int i = 0; i < length / 2; i++) {
+        temp = str[i];
+        str[i] = str[length - 1 - i];
+        str[length - 1 - i] = temp;
+    }
+
+    printf("Reversed String: %s\n", str);
+
+    return 0;
+}
